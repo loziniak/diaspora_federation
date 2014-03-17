@@ -1,0 +1,6 @@
+* When user A@1 shares with user B@2, pod 2 becomes “neighbor” of pod 1.
+* 2 “subscribes” to 1 for all tags that user 2's users follow.
+* Each pod keeps a list of it’s neighbors and tags they subscribe.
+* When user (F@1) makes a public post, it is sent to all neighbors subscribed for tags (#music) present on this post (pods 2 and 3).
+* If a pod receives a public post from other pod and does not have this post in it’s database, it passes it to all neighbors subscribing to tags present in this post, and saves post to database.
+* If a received post is already present in database, nothing happens (eg. federation from 3 to 2).
